@@ -36,7 +36,6 @@ body {
   cursor: pointer;
   font-size: 2rem;
   padding: 0.5rem;
-  user-select: none;
 }
 
 /* Fullscreen menu (hidden by default) */
@@ -83,4 +82,10 @@ body:has(.menu-checkbox:checked) {
 
 .fullscreen-menu ul li a:hover {
   text-decoration: underline;
+}
+
+@media (width > 700px) {
+  .burger-menu {
+    display: none;
+  }
 }
