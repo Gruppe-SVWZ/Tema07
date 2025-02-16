@@ -1,0 +1,86 @@
+body {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.global_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 1rem;
+}
+
+.global_menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.global_menu a {
+  text-decoration: none;
+}
+
+/* burger menu */
+.menu-checkbox {
+  display: none;
+}
+
+.burger-menu {
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+/* Fullscreen menu (hidden by default) */
+.fullscreen-menu {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh); /* Take up remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+/* Show menu when checkbox is checked */
+.menu-checkbox:checked ~ .fullscreen-menu {
+  transform: scaleY(1);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Disable scrolling when menu is open */
+body:has(.menu-checkbox:checked) {
+  overflow: hidden;
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fullscreen-menu ul li a {
+  text-decoration: none;
+  transition: color 0s;
+}
+
+.fullscreen-menu ul li a:hover {
+  text-decoration: underline;
+}
