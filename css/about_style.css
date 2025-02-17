@@ -85,7 +85,7 @@ body:has(.menu-checkbox:checked) {
   text-decoration: underline;
 }
 
-footer {
+.footer_container {
   background-color: black;
   color: white;
   display: flex;
@@ -93,6 +93,10 @@ footer {
   text-align: left;
   flex-direction: column;
   margin-left: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer-section {
@@ -100,31 +104,26 @@ footer {
   padding: 0 1rem;
 }
 
-.footer h3 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
 .footer ul {
   list-style: none;
   padding: 0;
 }
 
-.footer ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer a {
+.footer-section a {
   color: white;
   text-decoration: none;
 }
 
-.footer a:hover {
+.footer-section a:hover {
   text-decoration: underline;
 }
 
 @media (width > 700px) {
   .burger-menu {
     display: none;
+  }
+
+  .footer_container {
+    flex-direction: row;
   }
 }
