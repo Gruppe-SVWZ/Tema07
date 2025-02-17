@@ -5,39 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forside</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/generel.css" />
   </head>
   <body>
-    <header></header>
-    <main>
-      <section>
-        <img src="" alt="" />
-        <span>BULK MADE BETTER</span>
-        <p><strong>All Goods</strong> is a B2B wholesale supplier of electronics, jewelry, and fashion. We offer curated selections, competitive pricing, and reliable service to help retailers meet market demands.</p>
-      </section>
-      <section>
-        <h1>Categories</h1>
-        <div class="category_list">
-          <div class="category_list_container">
-            <h2>Beauty</h2>
-            <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="palette" />
-            <a href="">Shop</a>
-          </div>
-          <div class="category_list_container">
-            <h2>Fragrances</h2>
-            <img src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png" alt="parfume" />
-            <a href="">Shop</a>
-          </div>
-          <div class="category_list_container">
-            <h2>Furniture</h2>
-            <img src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png" alt="sofa" />
-            <a href="">Shop</a>
-          </div>
-          <div class="category_list_container">
-            <h2>Groceries</h2>
-            <img src="https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png" alt="æg" />
-            <a href="">Shop</a>
+    <header>
+      <nav class="global_menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li>
+            <a href="">
+              <img src="" alt="" />
+            </a>
+          </li>
+          <li><a href=""></a></li>
+        </ul>
+
+        <!-- full screen burger -->
+        <div class="header_menu">
+          <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+          <label for="menu-toggle" class="burger-menu">&#9776;</label>
+
+          <div class="fullscreen-menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
           </div>
         </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <img class="fuld" src="img/All_goods_frontpage.webp" alt="skilt" />
+        <span>BULK MADE BETTER</span>
+        <p><strong>All Goods</strong> is a B2B wholesale supplier of electronics, jewelry, and fashion. We offer curated selections, competitive pricing, and reliable service to help retailers meet market demands.</p>
       </section>
       <section>
         <h2>Popular products</h2>
@@ -46,6 +52,31 @@
           <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
           <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
           <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
+        </div>
+      </section>
+      <section>
+        <h1>Categories</h1>
+        <div class="category_list">
+          <!-- <div class="category_list_container">
+            <h2>Beauty</h2>
+            <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="palette" />
+            <div><a href="produktside.html?category=Beauty">Shop</a></div>
+          </div>
+          <div class="category_list_container">
+            <h2>Fragrances</h2>
+            <img src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png" alt="parfume" />
+            <div><a href="produktside.html?category=fragrances">Shop</a></div>
+          </div>
+          <div class="category_list_container">
+            <h2>Furniture</h2>
+            <img src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png" alt="sofa" />
+            <div><a href="produktside.html?category=furniture">Shop</a></div>
+          </div>
+          <div class="category_list_container">
+            <h2>Groceries</h2>
+            <img src="https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png" alt="æg" />
+            <div><a href="produktside.html?category=groceries">Shop</a></div>
+          </div> -->
         </div>
       </section>
     </main>
