@@ -5,6 +5,18 @@ body {
   max-width: 100%;
 }
 
+h1 {
+  font-size: 45pt;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 30pt;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .global_menu {
   display: flex;
   justify-content: space-between;
@@ -24,6 +36,7 @@ body {
 
 .global_menu a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* burger menu */
@@ -54,6 +67,7 @@ body {
   transition: transform 0.4s ease-in-out;
   box-sizing: border-box;
   z-index: 20;
+  background-color: white;
 }
 
 /* Show menu when checkbox is checked */
@@ -104,18 +118,34 @@ body:has(.menu-checkbox:checked) {
   padding: 0 1rem;
 }
 
-.footer ul {
+.footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-section a {
+.footer-section ul li {
+  margin-top: 0.5rem;
+}
+
+.footer-section ul a {
   color: white;
   text-decoration: none;
 }
 
 .footer-section a:hover {
   text-decoration: underline;
+}
+
+footer h3 {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.footer_slogan {
+  font-size: 11vw;
+  color: transparent;
+  -webkit-text-stroke: 0.5px black;
 }
 
 @media (width > 700px) {
@@ -125,5 +155,9 @@ body:has(.menu-checkbox:checked) {
 
   .footer_container {
     flex-direction: row;
+  }
+
+  .footer_slogan {
+    -webkit-text-stroke: 1px black;
   }
 }
