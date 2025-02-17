@@ -25,3 +25,148 @@ html {
   --H_font: "Inter_28pt-Bold";
   --p_font: "Inter_28pt-Light";
 }
+
+.global_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 95%;
+  z-index: 1000;
+}
+
+.global_menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.global_menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* burger menu */
+.menu-checkbox {
+  display: none;
+}
+
+.burger-menu {
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Fullscreen menu (hidden by default) */
+.fullscreen-menu {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh); /* Take up remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+  box-sizing: border-box;
+  z-index: 20;
+  background-color: white;
+}
+
+/* Show menu when checkbox is checked */
+.menu-checkbox:checked ~ .fullscreen-menu {
+  transform: scaleY(1);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Disable scrolling when menu is open */
+body:has(.menu-checkbox:checked) {
+  overflow: hidden;
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  flex-direction: column;
+  margin-top: -15rem;
+}
+
+.fullscreen-menu ul li a {
+  text-decoration: none;
+  transition: color 0s;
+}
+
+.fullscreen-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer_container {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction: column;
+  margin-left: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-section {
+  flex: 1; /* Each section takes up equal space */
+  padding: 0 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-top: 0.5rem;
+}
+
+.footer-section ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+footer h3 {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.footer_slogan {
+  font-size: 11vw;
+  color: transparent;
+  -webkit-text-stroke: 0.5px black;
+}
+
+@media (width > 700px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .footer_container {
+    flex-direction: row;
+  }
+
+  .footer_slogan {
+    -webkit-text-stroke: 1px black;
+  }
+}
