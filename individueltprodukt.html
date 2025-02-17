@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="individueltprodukt_layout.css">
+    <link rel="stylesheet" href="individueltprodukt_style.css">
+    <link rel="stylesheet" href="css/generel.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>All Goods</title>
+</head>
+<body>
+    <header>
+        <nav class="global_menu">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+              <li>
+                <a href="">
+                  <img src="" alt="" />
+                </a>
+              </li>
+              <li><a href=""></a></li>
+            </ul>
+    </header>
+
+
+    <main>
+        <section class="product_image_container">
+            <img src="" alt="">
+        </section>
+
+        <section class="product_info">
+            <div class="product-info">
+                <div class="product-name">
+                    <h1>Annibale Colombo Sofa</h1>
+                    <p>The Annibale Colombo Sofa is a sophisticated and comfortable seating option, 
+                        featuring exquisite design and premium upholstery for your living room.</p>
+                    </div>
+                <div class="price_discount">
+                    <div class="price">$2499.99</div>
+                    <div class="discount">-18.54%</div>
+                </div>
+                    <div class="cart-section">
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="add-to-cart">ADD TO CART</button>
+                    </div>
+                    <div class="info">
+                        <p>Stock: 16</p>
+                        <p>Shipping: Ships overnight</p>
+                        <p>Warranty: 1 month warranty</p>
+                    </div>
+            </div>
+            
+        
+            <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
+            <div id="description-content" class="toggle-content">
+                <p>The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.</p>
+                <p>Dimensions: <br> Width: 20.97 <br> Height:19.11 <br> Depth: 25.81</p>
+            </div>
+
+            <button class="toggle-btn" onclick="toggleDropdown('review-content')">Reviews ↓</button>
+            <div id="review-content" class="toggle-content">
+                <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
+            </div>
+        </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
