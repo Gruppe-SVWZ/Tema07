@@ -1,0 +1,22 @@
+img {
+  width: 60%;
+  height: 100%;
+  margin-left: 15%;
+}
+a {
+  border: solid 2px darkgreen;
+  background-color: darkgreen;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+  top: -5%;
+  left: -40%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  box-shadow: 10%;
+}
+.category_list_container {
+  align-items: center;
+}
