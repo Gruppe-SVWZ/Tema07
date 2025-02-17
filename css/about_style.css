@@ -2,6 +2,7 @@ body {
   margin-right: 1rem;
   margin-left: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
 }
 
 .global_menu {
@@ -9,9 +10,8 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 95%;
   z-index: 1000;
-  margin-top: 1rem;
 }
 
 .global_menu ul {
@@ -35,7 +35,6 @@ body {
   z-index: 1000;
   cursor: pointer;
   font-size: 2rem;
-  padding: 0.5rem;
 }
 
 /* Fullscreen menu (hidden by default) */
@@ -73,6 +72,8 @@ body:has(.menu-checkbox:checked) {
   list-style: none;
   padding: 0;
   text-align: center;
+  flex-direction: column;
+  margin-top: -15rem;
 }
 
 .fullscreen-menu ul li a {
