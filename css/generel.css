@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Inter_28pt-Thin";
+  src: url(../fonts/Inter_28pt-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Inter_28pt-Bold";
+  src: url(../fonts/Inter_28pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter_28pt-Light";
+  src: url(../fonts/Inter_28pt-Light.ttf);
+}
+
+@font-face {
+  font-family: "Inter_28pt-ExtraLight";
+  src: url(../fonts/Inter_28pt-ExtraLight.ttf);
+}
+
+html {
+  --BG_color: white;
+  --H1H2_color: black;
+  --BG_color2: #fcfaf8;
+  --H_font: "Inter_28pt-Bold";
+  --p_font: "Inter_28pt-Light";
+}
