@@ -6,7 +6,7 @@
     <title>Shop</title>
     <link rel="stylesheet" href="css/generel.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/produktisde.css" />
+    <link rel="stylesheet" href="css/produktside.css" />
 </head>
 <body>
     <header> 
@@ -14,13 +14,14 @@
         <div class="burger-menu"></div>
     </header>
     <main>
-        <section>
-            <h1>Shop</h1>
-            <img src="./img" alt="">
-        </section>
-
+        <div>
+        <div class="hero-billede">
+            <img src="./img/All_goods_shop.webp" alt="Billede af Allgoods">
+        </div>
+    <h1>Shop</h1>
+</div>
     
-    <section class="categories">
+    <!-- <section class="categories">
         <h2>Shop categories</h2>
         <div class="category-container">
             <div class="category">
@@ -40,27 +41,44 @@
                 <p>Groceries</p>
             </div>
         </div>
+    </section> -->
+
+    <section class="products">
+        <h2 class="alleprodukter">All products</h2>
+      
+
+        <div class="product_list" id="productContainer">
+        <article class="product_list_container">
+         <h2></h2>
+        <a href="indvidueltprodukt.html">
+            <img src="img/product1.png" alt="Produkt 1">
+            <h3>Produkt 1</h3>
+            <p>Pris: 199 kr.</p>
+        </a>
+    </article>
+        </div>
+
     </section>
 
-        <div>
-            <h2>All products</h2>
-            <h3>Filtrér</h3> <h3>Sortér</h3>
-            <div class="produkter_grid">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+    <section class="other-customers">
+        <h2>Other customers bought</h2>
+        <div class="carousel">
+            <button class="prev">‹</button>
+            <div class="carousel-items">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.40.58.png" alt="Product 1">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.41.24.png" alt="Product 2">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.42.28.png" alt="Product 3">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.48.58.png" alt="Product 4">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.15.png" alt="Product 5">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.42.png" alt="Product 6">
+                <img src="./img/Skærmbillede 2025-02-18 kl. 00.50.07.png" alt="Product 7">
             </div>
+            <button class="next">›</button>
         </div>
+    </section>
 
-        <div class="">
-            <h2>Other customers bought</h2>
-        </div>
     </main>
     <footer></footer>
+    <script src="./js/produktside.js"></script>
 </body>
 </html>
