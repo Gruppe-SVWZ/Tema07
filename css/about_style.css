@@ -85,6 +85,44 @@ body:has(.menu-checkbox:checked) {
   text-decoration: underline;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.footer-section {
+  flex: 1; /* Each section takes up equal space */
+  padding: 0 1rem;
+}
+
+.footer h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 @media (width > 700px) {
   .burger-menu {
     display: none;
