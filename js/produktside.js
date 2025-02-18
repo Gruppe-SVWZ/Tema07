@@ -105,26 +105,46 @@ function showList(products) {
   console.log(markup);
   listContainer.innerHTML = markup;
 }
+// -----------------------------------------------------------------------------------
+const carouselItems = document.querySelector(".carousel-items");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
-const carouselItems = document.querySelector(".carousel-items");
 
 let currentIndex = 0;
 
 function updateCarousel() {
   const items = document.querySelectorAll(".carousel-items img");
   const totalItems = items.length;
+  const itemWidth = window.innerWidth > 700 ? 250 : 200;
 
-  // Skub karussellen til højre eller venstre
-  carouselItems.style.transform = `translateX(-${currentIndex * 220}px)`; // 220px da hvert billede er 200px + gap (20px)
+  carouselItems.style.transform = `translateX(-${currentIndex * (itemWidth + 20)}px)`;
+
+  if (currentIndex === totalItems - 1) {
+    nextButton.disabled = true;
+  } else {
+    nextButton.disabled = false;
+  }
+
+  if (currentIndex === 0) {
+    prevButton.disabled = true;
+  } else {
+    prevButton.disabled = false;
+  }
 }
 
 prevButton.addEventListener("click", () => {
-  currentIndex = currentIndex === 0 ? document.querySelectorAll(".carousel-items img").length - 1 : currentIndex - 1;
-  updateCarousel();
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
 });
 
 nextButton.addEventListener("click", () => {
-  currentIndex = currentIndex === document.querySelectorAll(".carousel-items img").length - 1 ? 0 : currentIndex + 1;
-  updateCarousel();
+  const totalItems = document.querySelectorAll(".carousel-items img").length;
+  if (currentIndex < totalItems - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
 });
+
+updateCarousel();
