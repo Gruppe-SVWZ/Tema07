@@ -38,7 +38,11 @@ body, html {
     display: block;
     margin: 0;
     padding: 0;
+    margin-top: 60px;
   
+}
+.icons{
+    visibility: hidden;
 }
 h1 {
     position: relative;
@@ -130,21 +134,31 @@ button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
-.scroll-indicator {
-    position: absolute;
-    top: 3.7%;
-    right: 20px;  
-    transform: translateY(-50%);
-    z-index: 1000;  
-}
 
-.scroll-arrow {
-    font-size: 1.5rem; 
-    color: black;
-}
+.pil_ned {
+    margin-top: 2rem;
+  }
+  
+  .pil_ned img {
+    width: 30px;
+    height: auto;
+    margin-left: 85%;
+  }
 
   /* Media query til større skærme */
   @media (min-width: 700px) {
+    .icons{
+        visibility:visible;
+    }
+    .pil_ned {
+        margin-top: 8rem;
+      }
+
+      .pil_ned img {
+        width: 30px;
+        height: auto;
+        margin-left: 90%;
+      }
     .product_list {
       grid-template-columns: repeat(4, 1fr); 
     }
@@ -168,7 +182,7 @@ button:disabled {
         margin-top: -190px; 
     }
     .alleprodukter{
-        margin-top: 400px;
+        margin-top: 300px;
     }
     .product_list {
         grid-template-columns: repeat(4, 1fr); 
@@ -186,16 +200,5 @@ button:disabled {
     .carousel-items {
         gap: 20px; 
     }
-    .scroll-indicator {
-        position: absolute;
-        top: 8%;
-        right: 20px;  
-        transform: translateY(-50%);
-        z-index: 1000;  
-    }
-    
-    .scroll-arrow {
-        font-size: 2rem; 
-        color: black;
-    }
+ 
   }

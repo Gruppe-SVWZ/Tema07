@@ -107,7 +107,6 @@ function fetchProducts(url) {
 function handleCategory() {
   fetchCategories().then((categories) => {
     const formattedCategory = mycategory ? categories[mycategory.toLowerCase()] || "All Products" : "All Products";
-
     pageTitle.textContent = formattedCategory;
 
     if (mycategory) {
@@ -116,6 +115,31 @@ function handleCategory() {
       fetchProducts("https://dummyjson.com/products?limit=50");
     }
   });
+}
+
+// Den korrekte måde at vælge ul-elementet på
+let categoriesContainer = document.querySelector(".categories"); // Vælg ul-elementet
+
+// Fetch categories og vis dem
+fetch(`https://dummyjson.com/products/categories`)
+  .then((response) => response.json())
+  .then(showCategories);
+
+function showCategories(categories) {
+  console.log("Categories:", categories); // Log for debugging
+
+  // Generer HTML for kategorierne
+  const markup = categories
+    .map(
+      (category) => `
+          <li><a href="produktside.html?category=${category.slug}">${category.name}</a></li>`
+    )
+    .join(""); // Kombinerer alle li'er i én streng
+
+  console.log("Markup:", markup); // Tjek markup i konsollen
+
+  // Sæt den genererede HTML ind i .categories
+  categoriesContainer.innerHTML = markup;
 }
 
 // Funktion til at vise produkterne_____________________________________
