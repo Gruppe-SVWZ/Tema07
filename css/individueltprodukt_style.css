@@ -11,27 +11,22 @@ body {
     margin-bottom: 10px;
 }
 .image-container img {
-    width: 100%;
+  width: 100%;
 }
-.product-info {
-    margin-bottom: 15px;
-}
-.product-info h1 {
-    font-size: 20px;
-    margin-bottom: 5px;
+.product-name h1{
+  font-size: 20pt;
 }
 .price {
     font-size: 20px;
-    margin-bottom: 0px;
 }
 .discount {
-    font-size: 14px;
-    color: red;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: red;
+  margin-bottom: 10px;
 }
-.price_discount {
-  margin-top: 1em;
+.price-discount {
   text-align: end;
+  margin-top: 1em;
 }
 .info{
   padding-top: 0px;
@@ -68,7 +63,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* Description og review drop-down button */
+/* Description og review drop-down knap */
 .toggle-content {
   display: none;
   padding: 10px;
