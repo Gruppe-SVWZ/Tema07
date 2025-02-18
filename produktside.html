@@ -9,10 +9,37 @@
     <link rel="stylesheet" href="css/produktside.css" />
 </head>
 <body>
-    <header> 
-        <div class="logo">Allgoods</div>
-        <div class="burger-menu"></div>
-    </header>
+    <header>
+        <nav class="global_menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+            </li>
+            <li><a href=""></a></li>
+          </ul>
+  
+          <!-- full screen burger -->
+          <div class="header_menu">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+            <label for="menu-toggle" class="burger-menu">&#9776;</label>
+  
+            <div class="fullscreen-menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main>
         <div>
         <div class="hero-billede">
@@ -45,13 +72,22 @@
 
     <section class="products">
         <h2 class="alleprodukter">All products</h2>
-      
+        
+        <section class="sorter">
+            <label for="sort">Sort by:</label>
+            <select id="sort" name="sort">
+                <option value="default">Select Sort Option</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+            </select>
+        </section>
 
         <div class="product_list" id="productContainer">
         <article class="product_list_container">
          <h2></h2>
         <a href="indvidueltprodukt.html">
-            <img src="img/product1.png" alt="Produkt 1">
+            <!-- <img src="img/product1.png" alt="Produkt 1"> -->
             <h3>Produkt 1</h3>
             <p>Pris: 199 kr.</p>
         </a>
@@ -80,5 +116,8 @@
     </main>
     <footer></footer>
     <script src="./js/produktside.js"></script>
+    <div class="scroll-indicator">
+        <span class="scroll-arrow">↓</span>
+    </div>
 </body>
 </html>
