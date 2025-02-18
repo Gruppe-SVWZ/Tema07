@@ -60,51 +60,71 @@
 //   console.log(markup);
 //   listContainer.innerHTML = markup;
 // }
-
 const mycategory = new URLSearchParams(window.location.search).get("category");
 const listContainer = document.querySelector(".product_list");
+const pageTitle = document.querySelector(".alleprodukter");
 
-// Funktion til at hente produkter
+function fetchCategories() {
+  return fetch("https://dummyjson.com/products/categories")
+    .then((response) => response.json())
+    .then((categories) => {
+      const formattedCategories = {};
+      categories.forEach((category) => {
+        formattedCategories[category.toLowerCase()] = category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      });
+      return formattedCategories;
+    })
+    .catch((error) => {
+      console.error("Fejl ved hentning af kategorier:", error);
+      return {};
+    });
+}
+
 function fetchProducts(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => showList(data.products))
-    .catch((error) => console.error("Fejl ved hentning af data:", error));
+    .catch((error) => console.error("Fejl ved hentning af produkter:", error));
 }
 
-// Tjek om der er en kategori i URL'en
-if (mycategory) {
-  fetchProducts(`https://dummyjson.com/products/category/${mycategory}`);
-} else {
-  fetchProducts("https://dummyjson.com/products?limit=50");
+function handleCategory() {
+  fetchCategories().then((categories) => {
+    const formattedCategory = mycategory ? categories[mycategory.toLowerCase()] || "All Products" : "All Products";
+
+    pageTitle.textContent = formattedCategory;
+
+    if (mycategory) {
+      fetchProducts(`https://dummyjson.com/products/category/${mycategory.toLowerCase()}`);
+    } else {
+      fetchProducts("https://dummyjson.com/products?limit=50");
+    }
+  });
 }
 
-// Funktion til at vise produkter
 function showList(products) {
-  console.log(products);
-  if (!Array.isArray(products)) {
-    console.error("Forventede en array, men fik:", products);
+  if (!Array.isArray(products) || products.length === 0) {
+    listContainer.innerHTML = "<p>Ingen produkter fundet i denne kategori.</p>";
     return;
   }
 
   const markup = products
     .map((product) => {
       const imageUrl = product.images?.[1] || product.thumbnail;
-
       return `
-      <article class="product_list_container">
-        <a href="indvidueltprodukt.html?id=${product.id}">
-          <img src="${imageUrl}" alt="${product.title}">
-          <h3>${product.title}</h3>
-          <p>Pris: ${product.price} kr.</p>
-        </a>
-      </article>`;
+        <article class="product_list_container">
+            <a href="indvidueltprodukt.html?id=${product.id}">
+                <img src="${imageUrl}" alt="${product.title}">
+                <h3>${product.title}</h3>
+                <p>Pris: ${product.price} kr.</p>
+            </a>
+        </article>`;
     })
     .join("");
 
-  console.log(markup);
   listContainer.innerHTML = markup;
 }
+
+handleCategory();
 // -----------------------------------------------------------------------------------
 const carouselItems = document.querySelector(".carousel-items");
 const prevButton = document.querySelector(".prev");
