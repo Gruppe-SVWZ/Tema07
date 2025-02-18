@@ -1,26 +1,26 @@
-let categoriesContainer = document.querySelector(".category_list");
+// let categoriesContainer = document.querySelector(".category_list");
 
-fetch(`https://dummyjson.com/products/category-list`)
-  .then((response) => response.json())
-  .then(showCategories);
+// fetch(`https://dummyjson.com/products/category-list`)
+//   .then((response) => response.json())
+//   .then(showCategories);
 
-function showCategories(categories) {
-  console.log(categories);
+// function showCategories(categories) {
+//   console.log(categories);
 
-  const markup = categories
-    .map(
-      (category) =>
-        `<div class="category_list_container">
-            
-            <a href="produktside.html?category=${category}">${category}</a></div>`
-    )
+//   const markup = categories
+//     .map(
+//       (category) =>
+//         `<div class="category_list_container">
 
-    .join("");
+//             <a href="produktside.html?category=${category}">${category}</a></div>`
+//     )
 
-  console.log("markup er: ", markup);
+//     .join("");
 
-  categoriesContainer.innerHTML = markup;
-}
+//   console.log("markup er: ", markup);
+
+//   categoriesContainer.innerHTML = markup;
+// }
 
 let currentIndex = 0;
 const slides = document.querySelectorAll('input[type="radio"]');
