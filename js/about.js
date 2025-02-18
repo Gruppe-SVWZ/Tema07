@@ -10,7 +10,7 @@ function showCategories(categories) {
   const markup = categories
     .map(
       (category) =>
-        `<li><a href="produktside.html?category=${category}">${category.name}</a></li>`)
+        `<li><a href="produktside.html?category=${category.slug}">${category.name}</a></li>`)
     
       .join("");
 
