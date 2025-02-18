@@ -21,3 +21,15 @@ function showCategories(categories) {
 
   categoriesContainer.innerHTML = markup;
 }
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('input[type="radio"]');
+const totalSlides = slides.length;
+
+function showNextSlide() {
+  slides[currentIndex].checked = false; // Fjern check fra nuværende slide
+  currentIndex = (currentIndex + 1) % totalSlides; // Næste slide
+  slides[currentIndex].checked = true; // Check næste slide
+}
+
+setInterval(showNextSlide, 3000); // Skift hvert 3. sekund
