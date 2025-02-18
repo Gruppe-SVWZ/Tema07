@@ -3,6 +3,14 @@ img {
   height: 100%;
   margin-left: 15%;
 }
+.hero{
+  margin-top: 0;
+  border-bottom: solid black 1px;
+  background-color: #FCFAF8;
+}
+section{
+  gap: 0;
+}
 a {
   text-decoration: none;
   color: white;
@@ -94,7 +102,7 @@ input[type="radio"] {
 }
 
 /* Styling af prikkerne */
-.nav-dot {
+/* .nav-dot {
   width: 12px;
   height: 12px;
   margin: 0 5px;
@@ -102,7 +110,8 @@ input[type="radio"] {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
-}
+
+} */
 
 /* Highlight prikken når den er valgt */
 #carousel-01:checked ~ .carousel-navigation label[for="carousel-01"] {
