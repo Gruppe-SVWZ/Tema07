@@ -71,6 +71,19 @@ a {
 .h2other{
     margin-top: 100px;
 }
+.sorter {
+    margin: 15px;
+    text-align: left;
+}
+.sorter, #sort{
+    font-family: "Inter_28pt-Light";
+}
+#sort {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+}
 .carousel {
     display: flex;
     align-items: center;

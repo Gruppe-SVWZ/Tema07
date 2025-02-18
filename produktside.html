@@ -72,13 +72,22 @@
 
     <section class="products">
         <h2 class="alleprodukter">All products</h2>
-      
+        
+        <section class="sorter">
+            <label for="sort">Sort by:</label>
+            <select id="sort" name="sort">
+                <option value="default">Select Sort Option</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+            </select>
+        </section>
 
         <div class="product_list" id="productContainer">
         <article class="product_list_container">
          <h2></h2>
         <a href="indvidueltprodukt.html">
-            <img src="img/product1.png" alt="Produkt 1">
+            <!-- <img src="img/product1.png" alt="Produkt 1"> -->
             <h3>Produkt 1</h3>
             <p>Pris: 199 kr.</p>
         </a>
