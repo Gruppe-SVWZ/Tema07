@@ -1,20 +1,62 @@
+html,
 body {
-  margin-right: 1rem;
-  margin-left: 1rem;
+  overflow-x: hidden;
+  width: 100%;
+  margin-left: 0;
+  height: 100%;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 h1 {
-  font-size: 45pt;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  font-size: 70pt;
+  margin-top: -2rem;
+  margin-bottom: 0;
+  z-index: 2;
+  position: relative;
+  line-height: 65%;
 }
 
 h2 {
-  font-size: 30pt;
-  margin-top: 1rem;
+  font-size: 35pt;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about_hero_text p {
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+}
+
+section p {
+  margin-top: 0;
+}
+
+.about_image1 {
+  width: 100vw;
+  height: auto;
+  position: relative; /* Ignore body margin */
+  left: 50%; /* Shift it to the center */
+  transform: translateX(-50%); /* Correct positioning */
+  margin-top: 3.5rem;
+}
+
+.icons {
+  display: none;
 }
 
 .global_menu {
@@ -22,8 +64,11 @@ h2 {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 95%;
+  width: 100vw;
+  height: 60px;
   z-index: 1000;
+  background-color: white;
+  margin-top: -0.5rem;
 }
 
 .global_menu ul {
@@ -48,6 +93,12 @@ h2 {
   z-index: 1000;
   cursor: pointer;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -6px;
+  margin-right: 0.5rem;
 }
 
 /* Fullscreen menu (hidden by default) */
@@ -114,14 +165,23 @@ body:has(.menu-checkbox:checked) {
 }
 
 .footer-section {
-  flex: 1; /* Each section takes up equal space */
-  padding: 0 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
+.footer-section:last-of-type {
+  margin-bottom: 2rem;
+}
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #fcfaf8;
+  border-top: 0.5px solid black;
 }
 
 .footer-section ul li {
@@ -143,14 +203,51 @@ footer h3 {
 }
 
 .footer_slogan {
-  font-size: 11vw;
+  font-size: 12.4vw;
   color: transparent;
   -webkit-text-stroke: 0.5px black;
+  margin-left: 0.5rem;
+}
+
+.logo {
+  width: 150px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -1rem;
+}
+
+.global_menu_desktop {
+  display: none !important;
+}
+
+.pil_ned {
+  margin-bottom: 4rem;
+}
+
+.pil_ned img {
+  width: 25px;
+  height: auto;
+  margin-left: 0.8rem;
 }
 
 @media (width > 700px) {
   .burger-menu {
     display: none;
+  }
+
+  .global_menu {
+    display: flex;
+    width: 100vw !important;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
   }
 
   .footer_container {
@@ -159,5 +256,108 @@ footer h3 {
 
   .footer_slogan {
     -webkit-text-stroke: 1px black;
+  }
+
+  .global_menu_desktop {
+    display: flex !important;
+    align-items: center;
+    flex: 1;
+    font-size: 14pt;
+    margin-left: 1rem;
+  }
+
+  .global_menu_desktop a:hover {
+    text-decoration: underline;
+  }
+
+  .global_menu ul {
+    gap: 2rem;
+  }
+
+  .icons {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 1.5rem;
+  }
+
+  .icons img {
+    width: 28px;
+  }
+
+  .about_hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin-right: 1rem;
+    gap: 1rem;
+  }
+
+  .about_image1 {
+    width: 100%;
+    margin-top: 12rem;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    margin-top: 7rem;
+    font-size: 16vw;
+    white-space: nowrap;
+    position: absolute;
+    grid-row: 1;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 60pt;
+  }
+
+  .about_hero_text {
+    order: -1;
+  }
+
+  .about_hero_text p {
+    margin-top: 19rem;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10rem;
+    gap: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  section img {
+    margin-left: 1rem;
+  }
+
+  .footer-section:nth-of-type(1) {
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    width: 140%;
+  }
+
+  .logo {
+    height: 50px;
+    width: 120px;
+    margin-left: 0;
+  }
+
+  footer {
+    border-top: solid 1px black;
+  }
+
+  .pil_ned {
+    margin-bottom: 0;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
   }
 }
