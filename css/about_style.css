@@ -236,6 +236,77 @@ footer h3 {
   margin-left: 0.8rem;
 }
 
+/* category dropdown */
+.category_dropdown_container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu_checkbox {
+  display: none;
+}
+
+.category_menu {
+  cursor: pointer;
+  font-size: 2rem;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the arrow when the checkbox is checked */
+.menu_checkbox:checked + .category_menu {
+  transform: rotate(180deg);
+}
+
+/* Fullscreen menu (hidden by default) */
+.category_dropdown {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh); /* Take up remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+  box-sizing: border-box;
+  z-index: 20;
+  background-color: green;
+}
+
+/* Show menu when checkbox is checked */
+.menu_checkbox:checked ~ .category_dropdown {
+  transform: scaleY(1);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Disable scrolling when menu is open */
+body:has(.menu_checkbox:checked) {
+  overflow: hidden;
+}
+
+.category_dropdown ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  flex-direction: column;
+  margin-top: -15rem;
+}
+
+.category_dropdown ul li a {
+  text-decoration: none;
+  transition: color 0s;
+}
+
+.category_dropdown ul li a:hover {
+  text-decoration: underline;
+}
+
 @media (width > 700px) {
   .burger-menu {
     display: none;
