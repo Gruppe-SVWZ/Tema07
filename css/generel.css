@@ -197,11 +197,11 @@ footer h3 {
 }
 
 .footer_slogan {
-  font-size: 11.9vw;
+  font-size: 12.4vw;
   color: transparent;
   -webkit-text-stroke: 0.5px black;
   margin-left: 0.5rem;
-  /* font-family: var(--H_font); */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
