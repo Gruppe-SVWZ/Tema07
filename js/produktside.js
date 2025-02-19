@@ -68,7 +68,7 @@ const sortSelect = document.querySelector("#sort");
 let productsData = [];
 
 function fetchCategories() {
-  return fetch("https://dummyjson.com/products/categories")
+  return fetch(`https://dummyjson.com/products/categories`)
     .then((response) => response.json())
     .then((categories) => {
       console.log("Hentede kategorier:", categories);
@@ -154,7 +154,7 @@ function showList(products) {
       const imageUrl = product.images?.[1] || product.thumbnail;
       return `
         <article class="product_list_container">
-            <a href="indvidueltprodukt.html?id=${product.id}">
+            <a href="individueltprodukt.html?id=${product.id}">
                 <img src="${imageUrl}" alt="${product.title}">
                 <h3>${product.title}</h3>
                 <p>Pris: ${product.price} kr.</p>

@@ -1,104 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;" />
 
-</head>
-    <link rel="stylesheet" href="css/individueltprodukt_layout.css">
-    <link rel="stylesheet" href="css/individueltprodukt_style.css">
-    <link rel="stylesheet" href="css/generel.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/individueltprodukt_layout.css" />
+    <link rel="stylesheet" href="css/individueltprodukt_style.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/layout.css" />
     <title>All Goods</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="global_menu">
-          <ul class="global_menu_desktop">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produktside.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-              <a href="">
-                <img src="" alt="" />
-              </a>
-            </li>
-            <li><a href=""></a></li>
-          </ul>
-  
-          <div class="logo">
-            <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
-          </div>
-  
-          <div class="icons">
-            <div>
-              <img src="img/search.webp" alt="" />
-            </div>
-            <div>
-              <img src="img/Shopping cart.webp" alt="" />
-            </div>
-          </div>
-  
-          <!-- full screen burger -->
-          <div class="header_menu">
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-            <label for="menu-toggle" class="burger-menu">&#9776;</label>
-  
-            <div class="fullscreen-menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produktside.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <nav class="global_menu">
+        <ul class="global_menu_desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produktside.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="">
+              <img src="" alt="" />
+            </a>
+          </li>
+          <li><a href=""></a></li>
+        </ul>
 
-      <main>
-        <section class="product">
-            <div class="product_image_container">
-                <img src="ef3-placeholder-image.jpg" alt="">
+        <div class="logo">
+          <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
+        </div>
+
+        <div class="icons">
+          <div>
+            <img src="img/search.webp" alt="" />
+          </div>
+          <div>
+            <img src="img/Shopping cart.webp" alt="" />
+          </div>
+        </div>
+
+        <!-- full screen burger -->
+        <div class="header_menu">
+          <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+          <label for="menu-toggle" class="burger-menu">&#9776;</label>
+
+          <div class="fullscreen-menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="produktside.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product">
+        <!-- <div class="product_image_container">
+          <img src="ef3-placeholder-image.jpg" alt="" />
+        </div> -->
+
+        <!-- <section class="product_info">
+          <div class="product-info">
+            <div class="product-name">
+              <h1></h1> -->
+        <!-- Titel vil blive fyldt af JS -->
+        <!-- <p></p> -->
+        <!-- Beskrivelse vil blive fyldt af JS -->
+        <!-- </div>
+            <div class="price-discount">
+              <div class="price"></div> -->
+        <!-- Pris vil blive fyldt af JS -->
+        <!-- <div class="discount"></div> -->
+        <!-- Eventuelt rabat -->
+        <!-- </div>
+            <div class="cart-section">
+              <input type="number" class="quantity" value="1" min="1" />
+              <button class="add-to-cart">ADD TO CART</button>
             </div>
-            
-            <section class="product_info">
-                <div class="product-info">
-                    <div class="product-name">
-                        <h1></h1> <!-- Titel vil blive fyldt af JS -->
-                        <p></p> <!-- Beskrivelse vil blive fyldt af JS -->
-                    </div>
-                    <div class="price-discount">
-                        <div class="price"></div> <!-- Pris vil blive fyldt af JS -->
-                        <div class="discount"></div> <!-- Eventuelt rabat -->
-                    </div>
-                    <div class="cart-section">
-                        <input type="number" class="quantity" value="1" min="1">
-                        <button class="add-to-cart">ADD TO CART</button>
-                    </div>
-                    <div class="info">
-                        <p>Stock: 16</p>
-                        <p>Shipping: Ships overnight</p>
-                        <p>Warranty: 1 month warranty</p>
-                    </div>
-                </div>
-    
-                <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
-                <div id="description-content" class="toggle-content">
-                    <p></p> <!-- Beskrivelse vil blive fyldt af JS -->
-                    <p>Dimensions: <br> Width: 20.97 <br> Height:19.11 <br> Depth: 25.81</p>
-                </div>
-                
-                <button class="toggle-btn" onclick="toggleDropdown('review-content')">Reviews ↓</button>
-                <div id="review-content" class="toggle-content">
-                    <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
-                </div>
-            </section>
-        </section>
+            <div class="info">
+              <p>Stock: 16</p>
+              <p>Shipping: Ships overnight</p>
+              <p>Warranty: 1 month warranty</p>
+            </div>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
+          <div id="description-content" class="toggle-content">
+            <p></p> -->
+        <!-- Beskrivelse vil blive fyldt af JS -->
+        <!-- <p>
+              Dimensions: <br />
+              Width: 20.97 <br />
+              Height:19.11 <br />
+              Depth: 25.81
+            </p>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleDropdown('review-content')">Reviews ↓</button>
+          <div id="review-content" class="toggle-content">
+            <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
+          </div>
+        </section> -->
+      </section>
     </main>
-    
+
     <!-- <main>
         <section class="product">
             <div class="product_image_container">
@@ -144,13 +153,13 @@
 
     </main> -->
     <footer>
-        <span class="footer_slogan">Bulk Made Better.</span>
-        <div class="footer_container">
-          <div class="footer-section">
-            <h3>Categories</h3>
-            <ul class="categories">
-              <li></li>
-              <!-- <li><a href="#">Beaty</a></li>
+      <span class="footer_slogan">Bulk Made Better.</span>
+      <div class="footer_container">
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul class="categories">
+            <li></li>
+            <!-- <li><a href="#">Beaty</a></li>
               <li><a href="#">Fragrances</a></li>
               <li><a href="#">Furniture</a></li>
               <li><a href="#">Groceries</a></li>
@@ -174,38 +183,38 @@
               <li><a href="#">Womens Jewellery</a></li>
               <li><a href="#">Womens Shoes</a></li>
               <li><a href="#">Womens Watches</a></li> -->
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h3>About</h3>
-            <ul>
-              <li><a href="#">About us</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h3>Contact</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Support</a></li>
-            </ul>
-          </div>
+          </ul>
         </div>
-      </footer>
+
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <script>
-        function toggleDropdown(id) {
-            var content = document.getElementById(id);
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
+      function toggleDropdown(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
         }
+      }
     </script>
     <script src="js/about.js"></script>
     <script src="js/individueltprodukt.js"></script>
-</body>
+  </body>
 </html>

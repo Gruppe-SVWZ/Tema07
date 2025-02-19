@@ -96,34 +96,101 @@ function toggleDropdown(id) {
 // fetchProductDetails();
 // Hent produkt-id fra URL'en
 
+
+
+
+
+
+
+
+
+
+// victors seneste
+
 // Hent produkt-id fra URL'en
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get("id");
-if (productId) {
-  fetch(`https://dummyjson.com/products/${productId}`)
-    .then((res) => res.json())
-    .then(showProduct)
-    .catch((error) => console.error("Fejl ved hentning af produkt:", error));
-} else {
-  console.log("Produkt-id mangler.");
-}
+// const urlParams = new URLSearchParams(window.location.search);
+// const productId = urlParams.get("id");
+// if (productId) {
+//   fetch(`https://dummyjson.com/products/${productId}`)
+//     .then((res) => res.json())
+//     .then(showProduct)
+//     .catch((error) => console.error("Fejl ved hentning af produkt:", error));
+// } else {
+//   console.log("Produkt-id mangler.");
+// }
 
-// Funktion til at vise produktdata på siden
-function showProduct(product) {
-  if (!product) {
-    document.querySelector(".product-info").innerHTML = "Produktet kunne ikke findes.";
-    return;
-  }
+// // Funktion til at vise produktdata på siden
+// function showProduct(product) {
+//   if (!product) {
+//     document.querySelector(".product-info").innerHTML = "Produktet kunne ikke findes.";
+//     return;
+//   }
 
-  // Find elementerne på siden
-  const productName = document.querySelector(".product-name h1");
-  const productDescription = document.querySelector(".product-name p");
-  const productPrice = document.querySelector(".price");
-  const productImage = document.querySelector(".product_image_container img");
+//   // Find elementerne på siden
+//   const productName = document.querySelector(".product-name h1");
+//   const productDescription = document.querySelector(".product-name p");
+//   const productPrice = document.querySelector(".price");
+//   const productImage = document.querySelector(".product_image_container img");
 
-  // Opdater indholdet med produktdata
-  productName.textContent = product.title;
-  productDescription.textContent = product.description;
-  productPrice.textContent = `${product.price} kr.`;
-  productImage.src = product.image; // Opdater produktbillede
-}
+//   // Opdater indholdet med produktdata
+//   productName.textContent = product.title;
+//   productDescription.textContent = product.description;
+//   productPrice.textContent = `${product.price} kr.`;
+//   productImage.src = product.image; // Opdater produktbillede
+// }
+
+
+const productId = new URLSearchParams(window.location.search).get("id");
+const productContainer = document.querySelector(".product")
+
+
+fetch(`https://dummyjson.com/products/${productId}`)
+.then(response => response.json())
+.then(data => {
+    productContainer.innerHTML = `
+    <div class="product_image_container">
+          <img src="ef3-placeholder-image.jpg" alt="" />
+        </div>
+
+        <section class="product_info">
+          <div class="product-info">
+            <div class="product-name">
+              <h1>${data.title}</h1>
+              <p>${data.description}</p>
+            </div>
+            <div class="price-discount">
+              <div class="price">${data.price} €</div>
+              <div class="discount">${data.discountPercentage}</div>
+              <!-- Eventuelt rabat -->
+            </div>
+            <div class="cart-section">
+              <input type="number" class="quantity" value="1" min="1" />
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="info">
+              <p>Stock: ${data.availabilityStatus}</p>
+              <p>Shipping: ${data.shippingInformation}</p>
+              <p>Warranty: ${data.warrantyInformation}</p>
+            </div>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
+          <div id="description-content" class="toggle-content">
+            <p>${data.description}</p>
+            <!-- Beskrivelse vil blive fyldt af JS -->
+            <p>
+              Dimensions:<br />
+              Width: ${data.dimensions.width} CM<br />
+              Height: ${data.dimensions.height} CM<br />
+              Depth: ${data.dimensions.depth} CM<br />
+              Weight: ${data.weight} KG
+            </p>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleDropdown('review-content')">Reviews ↓</button>
+          <div id="review-content" class="toggle-content">
+            <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
+          </div>
+        </section>
+    `
+})
