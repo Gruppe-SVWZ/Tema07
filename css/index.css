@@ -267,7 +267,6 @@ body:has(.menu-checkbox:checked) {
     border-right: #425741 solid 1px;
     border-bottom: white solid 1px;
     font-size: 10pt;
-    text-align: left;
   }
   .category_dropdown ul {
     list-style: none;
@@ -278,18 +277,12 @@ body:has(.menu-checkbox:checked) {
     gap: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    column-gap: 30rem;
-    margin-left: 0;
-    text-align: left;
+    column-gap: 10rem;
   }
   label h2 {
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 10px;
-    text-align: left;
     font-size: 5vw;
-  }
-  .category_dropdown ul li {
-    text-align: left;
   }
 }
