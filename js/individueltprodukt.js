@@ -41,4 +41,3 @@ fetch('https://dummyjson.com/products/1')
         </div>
 </div>
     `
-})
