@@ -1,148 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;" />
 
-</head>
     <title>Shop</title>
     <link rel="stylesheet" href="css/generel.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/produktside.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="global_menu">
-          <ul class="global_menu_desktop">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produktside.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-              <a href="">
-                <img src="" alt="" />
-              </a>
-            </li>
-            <li><a href=""></a></li>
-          </ul>
-  
-          <div class="logo">
-            <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
-          </div>
-  
-          <div class="icons">
-            <div>
-              <img src="img/search.webp" alt="" />
-            </div>
-            <div>
-              <img src="img/Shopping cart.webp" alt="" />
-            </div>
-          </div>
-  
-          <!-- full screen burger -->
-          <div class="header_menu">
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-            <label for="menu-toggle" class="burger-menu">&#9776;</label>
-  
-            <div class="fullscreen-menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produktside.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-    <main>
-        <div>
-        <div class="hero-billede">
-            <img src="./img/All_goods_shop.webp" alt="Billede af Allgoods">
-        </div>
-    <h1>Shop</h1>
-    <div class="pil_ned">
-        <img src="img/Arrow down.webp" alt="pil ned" />
-      </div>
-</div>
+      <nav class="global_menu">
+        <ul class="global_menu_desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produktside.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="">
+              <img src="" alt="" />
+            </a>
+          </li>
+          <li><a href=""></a></li>
+        </ul>
 
- <div class="category_dropdown_container">
-            <input type="checkbox" id="category_toggle" class="menu_checkbox" />
-            <label for="category_toggle" class="category_button">
-              <span>Categories</span>
-              <span class="category_menu">&#8595;</span>
-              <!-- Arrow ↓ -->
-            </label>
-        
-            <div class="category_dropdown">
-              <ul class="dropdown_ul">
-                <li></li>
-                <!-- <li><a href="">Shop</a></li>
+        <div class="logo">
+          <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
+        </div>
+
+        <div class="icons">
+          <div>
+            <img src="img/search.webp" alt="" />
+          </div>
+          <div>
+            <img src="img/Shopping cart.webp" alt="" />
+          </div>
+        </div>
+
+        <!-- full screen burger -->
+        <div class="header_menu">
+          <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+          <label for="menu-toggle" class="burger-menu">&#9776;</label>
+
+          <div class="fullscreen-menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="produktside.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <div class="hero-billede">
+          <img src="./img/All_goods_shop.webp" alt="Billede af Allgoods" />
+        </div>
+        <h1>Shop</h1>
+        <div class="pil_ned">
+          <img src="img/Arrow down.webp" alt="pil ned" />
+        </div>
+      </div>
+
+      <div class="category_dropdown_container">
+        <input type="checkbox" id="category_toggle" class="menu_checkbox" />
+        <label for="category_toggle" class="category_button">
+          <span>Categories</span>
+          <span class="category_menu">&#8595;</span>
+          <!-- Arrow ↓ -->
+        </label>
+
+        <div class="category_dropdown">
+          <ul class="dropdown_ul">
+            <li></li>
+            <!-- <li><a href="">Shop</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li> -->
-              </ul>
-            </div>
-          </div>
-    <section class="products"> 
+          </ul>
+        </div>
+      </div>
+      <section class="products">
         <h2 class="alleprodukter">All products</h2>
-      
+
         <section class="sorter">
-            <label for="sort">Sort by:</label>
-            <select id="sort" name="sort">
-                <option value="default">Select Sort Option</option>
-                <option value="price-low-high">Price: Low to High</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="newest">Newest First</option>
-            </select>
+          <label for="sort">Sort by:</label>
+          <select id="sort" name="sort">
+            <option value="default">Select Sort Option</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="newest">Newest First</option>
+          </select>
         </section>
 
         <div class="product_list" id="productContainer">
-            <article class="product_list_container">
-                <h2>Produkt 1</h2>
-                <a href="individueltprodukt.html?id=1">Se produkt</a>
-                <img src="img/product1.png" alt="Produkt 1">
-                <h3>Produkt 1</h3>
-                <p>Pris: 199 kr.</p>
-            </article>
-            <article class="product_list_container">
-                <h2>Produkt 2</h2>
-                <a href="individueltprodukt.html?id=2"></a> 
-                <img src="img/product2.png" alt="Produkt 2">
-                <h3>Produkt 2</h3>
-                <p>Pris: 249 kr.</p>
-            </article>
-            <!-- Flere produkter kan føjes til her -->
+          <!-- <article class="product_list_container">
+            <h2>Produkt 1</h2>
+            <a href="individueltprodukt.html?id=1">Se produkt</a>
+            <img src="img/product1.png" alt="Produkt 1" />
+            <h3>Produkt 1</h3>
+            <p>Pris: 199 kr.</p>
+          </article>
+          <article class="product_list_container">
+            <h2>Produkt 2</h2>
+            <a href="individueltprodukt.html?id=2"></a>
+            <img src="img/product2.png" alt="Produkt 2" />
+            <h3>Produkt 2</h3>
+            <p>Pris: 249 kr.</p>
+          </article> -->
         </div>
+      </section>
 
-    </section>
-
-    <section class="other-customers">
+      <section class="other-customers">
         <h2 class="h2other">Other customers bought</h2>
         <div class="carousel">
-            <button class="prev">‹</button>
-            <div class="carousel-items">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.40.58.png" alt="Product 1">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.41.24.png" alt="Product 2">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.42.28.png" alt="Product 3">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.48.58.png" alt="Product 4">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.15.png" alt="Product 5">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.42.png" alt="Product 6">
-                <img src="./img/Skærmbillede 2025-02-18 kl. 00.50.07.png" alt="Product 7">
-            </div>
-            <button class="next">›</button>
+          <button class="prev">‹</button>
+          <div class="carousel-items">
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.40.58.png" alt="Product 1" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.41.24.png" alt="Product 2" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.42.28.png" alt="Product 3" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.48.58.png" alt="Product 4" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.15.png" alt="Product 5" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.49.42.png" alt="Product 6" />
+            <img src="./img/Skærmbillede 2025-02-18 kl. 00.50.07.png" alt="Product 7" />
+          </div>
+          <button class="next">›</button>
         </div>
-    </section>
-
+      </section>
     </main>
     <footer>
-        <span class="footer_slogan">Bulk Made Better.</span>
-        <div class="footer_container">
-          <div class="footer-section">
-            <h3>Categories</h3>
-            <ul class="categories">
-              <li></li>
-              <!-- <li><a href="#">Beaty</a></li>
+      <span class="footer_slogan">Bulk Made Better.</span>
+      <div class="footer_container">
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul class="categories">
+            <li></li>
+            <!-- <li><a href="#">Beaty</a></li>
               <li><a href="#">Fragrances</a></li>
               <li><a href="#">Furniture</a></li>
               <li><a href="#">Groceries</a></li>
@@ -166,27 +162,26 @@
               <li><a href="#">Womens Jewellery</a></li>
               <li><a href="#">Womens Shoes</a></li>
               <li><a href="#">Womens Watches</a></li> -->
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h3>About</h3>
-            <ul>
-              <li><a href="#">About us</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h3>Contact</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Support</a></li>
-            </ul>
-          </div>
+          </ul>
         </div>
-      </footer>
+
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="./js/produktside.js"></script>
- 
-</body>
+  </body>
 </html>
