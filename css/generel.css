@@ -26,6 +26,31 @@ html {
   --p_font: "Inter_28pt-Light";
 }
 
+body {
+  height: 100%;
+  margin-top: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--H_font);
+}
+
+h1,
+h2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+p {
+  font-family: var(--p_font);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 12pt;
+  line-height: 150%;
+}
+
 .global_menu {
   display: flex;
   justify-content: space-between;
@@ -36,6 +61,7 @@ html {
   z-index: 1000;
   background-color: white;
   margin-top: -0.5rem;
+  font-family: var(--p_font);
 }
 
 .global_menu ul {
@@ -82,7 +108,7 @@ html {
   padding-right: 1rem;
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
   z-index: 20;
   background-color: white;
@@ -143,6 +169,7 @@ body:has(.menu-checkbox:checked) {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: var(--p_font);
 }
 
 footer {
@@ -170,10 +197,11 @@ footer h3 {
 }
 
 .footer_slogan {
-  font-size: 12.4vw;
+  font-size: 11.9vw;
   color: transparent;
   -webkit-text-stroke: 0.5px black;
   margin-left: 0.5rem;
+  font-family: var(--H_font);
 }
 
 .logo {
@@ -193,6 +221,17 @@ footer h3 {
   display: none !important;
 }
 
+.icons {
+  display: none;
+}
+
+.category_button {
+  font-family: var(--H_font);
+}
+
+.category_dropdown {
+  font-family: var(--p_font);
+}
 @media (width > 700px) {
   .burger-menu {
     display: none;
@@ -232,6 +271,7 @@ footer h3 {
   }
 
   .icons {
+    display: none;
     display: flex;
     gap: 3rem;
     align-items: center;

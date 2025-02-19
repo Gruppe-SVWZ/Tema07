@@ -6,10 +6,6 @@ body {
   height: 100%;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 h1,
 h2,
 p {
@@ -115,7 +111,7 @@ section p {
   padding-right: 1rem;
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   box-sizing: border-box;
   z-index: 20;
   background-color: white;
@@ -240,6 +236,8 @@ footer h3 {
 .category_dropdown_container {
   position: relative;
   display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .menu_checkbox {
@@ -250,21 +248,46 @@ footer h3 {
   cursor: pointer;
   font-size: 2rem;
   display: inline-block;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-/* Rotate the arrow when the checkbox is checked */
-.menu_checkbox:checked + .category_menu {
+/* Rotate the arrow when checkbox is checked */
+#category_toggle:checked + label .category_menu {
   transform: rotate(180deg);
+}
+
+label span {
+  cursor: pointer;
+}
+
+.category_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13rem; /* Adjust spacing between text and arrow */
+  background-color: #425741; /* Change to fit your design */
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: auto; /* Adjust button width */
+  transition: background 0.2s ease;
+  border-top: #425741 solid 1px;
+  border-left: #425741 solid 1px;
+  border-right: #425741 solid 1px;
+  border-bottom: white solid 1px;
+  font-size: 20pt;
+}
+
+.category_button:hover {
+  background-color: white; /* Darken on hover */
+  color: #425741;
+  border: #425741 solid 1px;
 }
 
 /* Fullscreen menu (hidden by default) */
 .category_dropdown {
-  position: absolute;
-  top: 2rem;
-  left: 0;
   width: 100%;
-  height: calc(100vh); /* Take up remaining space */
+  height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,35 +295,39 @@ footer h3 {
   padding-right: 1rem;
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   box-sizing: border-box;
-  z-index: 20;
-  background-color: green;
+  background-color: #425741;
+  overflow: hidden;
 }
 
 /* Show menu when checkbox is checked */
 .menu_checkbox:checked ~ .category_dropdown {
   transform: scaleY(1);
   pointer-events: auto;
-  opacity: 1;
+  height: auto;
+  overflow-y: auto;
 }
 
 /* Disable scrolling when menu is open */
-body:has(.menu_checkbox:checked) {
+body:has(.menu-checkbox:checked) {
   overflow: hidden;
 }
 
 .category_dropdown ul {
   list-style: none;
   padding: 0;
-  text-align: center;
-  flex-direction: column;
-  margin-top: -15rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .category_dropdown ul li a {
   text-decoration: none;
-  transition: color 0s;
+  color: white;
 }
 
 .category_dropdown ul li a:hover {
