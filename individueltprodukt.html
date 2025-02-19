@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;">
+
+</head>
     <link rel="stylesheet" href="css/individueltprodukt_layout.css">
     <link rel="stylesheet" href="css/individueltprodukt_style.css">
     <link rel="stylesheet" href="css/generel.css">
@@ -12,11 +15,11 @@
 <body>
     <header>
         <nav class="global_menu">
-          <ul>
+          <ul class="global_menu_desktop">
             <li><a href="index.html">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="produktside.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
               <a href="">
                 <img src="" alt="" />
@@ -24,6 +27,19 @@
             </li>
             <li><a href=""></a></li>
           </ul>
+  
+          <div class="logo">
+            <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
+          </div>
+  
+          <div class="icons">
+            <div>
+              <img src="img/search.webp" alt="" />
+            </div>
+            <div>
+              <img src="img/Shopping cart.webp" alt="" />
+            </div>
+          </div>
   
           <!-- full screen burger -->
           <div class="header_menu">
@@ -33,8 +49,8 @@
             <div class="fullscreen-menu">
               <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="produktside.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="">Contact</a></li>
               </ul>
             </div>
@@ -42,8 +58,48 @@
         </nav>
       </header>
 
-
-    <main>
+      <main>
+        <section class="product">
+            <div class="product_image_container">
+                <img src="ef3-placeholder-image.jpg" alt="">
+            </div>
+            
+            <section class="product_info">
+                <div class="product-info">
+                    <div class="product-name">
+                        <h1></h1> <!-- Titel vil blive fyldt af JS -->
+                        <p></p> <!-- Beskrivelse vil blive fyldt af JS -->
+                    </div>
+                    <div class="price-discount">
+                        <div class="price"></div> <!-- Pris vil blive fyldt af JS -->
+                        <div class="discount"></div> <!-- Eventuelt rabat -->
+                    </div>
+                    <div class="cart-section">
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="add-to-cart">ADD TO CART</button>
+                    </div>
+                    <div class="info">
+                        <p>Stock: 16</p>
+                        <p>Shipping: Ships overnight</p>
+                        <p>Warranty: 1 month warranty</p>
+                    </div>
+                </div>
+    
+                <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
+                <div id="description-content" class="toggle-content">
+                    <p></p> <!-- Beskrivelse vil blive fyldt af JS -->
+                    <p>Dimensions: <br> Width: 20.97 <br> Height:19.11 <br> Depth: 25.81</p>
+                </div>
+                
+                <button class="toggle-btn" onclick="toggleDropdown('review-content')">Reviews ↓</button>
+                <div id="review-content" class="toggle-content">
+                    <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    
+    <!-- <main>
         <section class="product">
             <div class="product_image_container">
                 <img src="ef3-placeholder-image.jpg" alt="">
@@ -82,16 +138,62 @@
                     <div id="review-content" class="toggle-content">
                         <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
                     </div>
-                </div>
+                
             </section>
         </section>
 
-    </main>
-
-
+    </main> -->
     <footer>
-
-    </footer>
+        <span class="footer_slogan">Bulk Made Better.</span>
+        <div class="footer_container">
+          <div class="footer-section">
+            <h3>Categories</h3>
+            <ul class="categories">
+              <li></li>
+              <!-- <li><a href="#">Beaty</a></li>
+              <li><a href="#">Fragrances</a></li>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Groceries</a></li>
+              <li><a href="#">Home Decoration</a></li>
+              <li><a href="#">Kitchen Accessories</a></li>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Mens Shirts</a></li>
+              <li><a href="#">Mens Shoes</a></li>
+              <li><a href="#">Mens Watches</a></li>
+              <li><a href="#">Mobile Accessories</a></li>
+              <li><a href="#">Motorcycle</a></li>
+              <li><a href="#">Skin Care</a></li>
+              <li><a href="#">Smartphones</a></li>
+              <li><a href="#">Sports Accessories</a></li>
+              <li><a href="#">Sunglasses</a></li>
+              <li><a href="#">Tablets</a></li>
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">Vehicle</a></li>
+              <li><a href="#">Womens Bags</a></li>
+              <li><a href="#">Womens Dressess</a></li>
+              <li><a href="#">Womens Jewellery</a></li>
+              <li><a href="#">Womens Shoes</a></li>
+              <li><a href="#">Womens Watches</a></li> -->
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 
     <script>
         function toggleDropdown(id) {
@@ -103,5 +205,7 @@
             }
         }
     </script>
+    <script src="js/about.js"></script>
+    <script src="js/individueltprodukt.js"></script>
 </body>
 </html>
