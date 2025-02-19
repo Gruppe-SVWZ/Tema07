@@ -201,7 +201,7 @@ footer h3 {
   color: transparent;
   -webkit-text-stroke: 0.5px black;
   margin-left: 0.5rem;
-  font-family: var(--H_font);
+  /* font-family: var(--H_font); */
 }
 
 .logo {
