@@ -15,6 +15,7 @@ body {
 }
 .product-name h1{
   font-size: 20pt;
+  margin-top: 150px;
 }
 .price {
     font-size: 20px;
@@ -27,6 +28,7 @@ body {
     color: red;
     margin-bottom: 10px;
     text-align: end;
+    margin-top: 150px;
 }
 .discount {
   font-size: 14px;

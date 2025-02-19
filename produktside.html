@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://dummyjson.com;">
+
+</head>
     <title>Shop</title>
     <link rel="stylesheet" href="css/generel.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -95,14 +98,21 @@
         </section>
 
         <div class="product_list" id="productContainer">
-        <article class="product_list_container">
-         <h2></h2>
-        <a href="indvidueltprodukt.html">
-            <!-- <img src="img/product1.png" alt="Produkt 1"> -->
-            <h3>Produkt 1</h3>
-            <p>Pris: 199 kr.</p>
-        </a>
-    </article>
+            <article class="product_list_container">
+                <h2>Produkt 1</h2>
+                <a href="individueltprodukt.html?id=1">Se produkt</a>
+                <img src="img/product1.png" alt="Produkt 1">
+                <h3>Produkt 1</h3>
+                <p>Pris: 199 kr.</p>
+            </article>
+            <article class="product_list_container">
+                <h2>Produkt 2</h2>
+                <a href="individueltprodukt.html?id=2"></a> 
+                <img src="img/product2.png" alt="Produkt 2">
+                <h3>Produkt 2</h3>
+                <p>Pris: 249 kr.</p>
+            </article>
+            <!-- Flere produkter kan føjes til her -->
         </div>
 
     </section>
