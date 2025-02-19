@@ -6,3 +6,39 @@ function toggleDropdown(id) {
         content.style.display = "none";
     }
 }
+
+
+const productId = new URLSearchParams(window.location.search).get("id");
+const productContainer = document.querySelector(".product_container")
+
+fetch('https://dummyjson.com/products/1')
+.then(res => res.json())
+.then(console.log);
+    productContainer.innerHTML = `
+    <section class="product_image_container">
+<img src="" alt="">
+</section>
+
+<section class="product_info">
+<div class="product-info">
+    <div class="product-name">
+        <h1>Annibale Colombo Sofa</h1>
+        <p>The Annibale Colombo Sofa is a sophisticated and comfortable seating option, 
+            featuring exquisite design and premium upholstery for your living room.</p>
+        </div>
+    <div class="price_discount">
+        <div class="price">$2499.99</div>
+        <div class="discount">-18.54%</div>
+    </div>
+        <div class="cart-section">
+            <input type="number" class="quantity" value="1" min="1">
+            <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="info">
+            <p>Stock: 16</p>
+            <p>Shipping: Ships overnight</p>
+            <p>Warranty: 1 month warranty</p>
+        </div>
+</div>
+    `
+})
