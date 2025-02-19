@@ -1,23 +1,35 @@
-let categoriesContainer = document.querySelector(".category_list");
+// let categoriesContainer = document.querySelector(".category_list");
 
-fetch(`https://dummyjson.com/products/category-list`)
-  .then((response) => response.json())
-  .then(showCategories);
+// fetch(`https://dummyjson.com/products/category-list`)
+//   .then((response) => response.json())
+//   .then(showCategories);
 
-function showCategories(categories) {
-  console.log(categories);
+// function showCategories(categories) {
+//   console.log(categories);
 
-  const markup = categories
-    .map(
-      (category) =>
-        `<div class="category_list_container">
-            
-            <a href="produktside.html?category=${category}">${category}</a></div>`
-    )
+//   const markup = categories
+//     .map(
+//       (category) =>
+//         `<div class="category_list_container">
 
-    .join("");
+//             <a href="produktside.html?category=${category}">${category}</a></div>`
+//     )
 
-  console.log("markup er: ", markup);
+//     .join("");
 
-  categoriesContainer.innerHTML = markup;
+//   console.log("markup er: ", markup);
+
+//   categoriesContainer.innerHTML = markup;
+// }
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('input[type="radio"]');
+const totalSlides = slides.length;
+
+function showNextSlide() {
+  slides[currentIndex].checked = false; // Fjern check fra nuværende slide
+  currentIndex = (currentIndex + 1) % totalSlides; // Næste slide
+  slides[currentIndex].checked = true; // Check næste slide
 }
+
+setInterval(showNextSlide, 3000); // Skift hvert 3. sekund

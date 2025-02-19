@@ -1,20 +1,5 @@
 .product-info{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.cart-section{
-    grid-row: span 2;
-    text-align: end;
-}
-
-.info{
-    grid-row: span 1 / -1;
-}
-
-.product-info{
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
@@ -26,7 +11,17 @@
 .info{
     grid-row: span 1 / -1;
 }
-
+.product-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.cart-section{
+    text-align: end;
+}
+.info{
+    grid-row: span 1 / -1;
+}
 .product_image_container{
     display: grid;
 }

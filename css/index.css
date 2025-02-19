@@ -3,6 +3,18 @@ img {
   height: 100%;
   margin-left: 15%;
 }
+span {
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 0.5px black;
+}
+h2 {
+  font-size: 10vw;
+}
+.hero {
+  background-color: #fffffa;
+  border-bottom: solid black 1px;
+}
 a {
   text-decoration: none;
   color: white;
@@ -29,6 +41,255 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 70%;
+  height: 300px;
+  margin-top: 10%;
 }
 
+header {
+  margin-top: 0;
+}
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  /* border: 2px solid #ddd; */
+  /* border-radius: 10px; */
+  position: relative;
+  height: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-track a {
+  flex: 0 0 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 400px;
+  object-fit: cover;
+  margin: 0;
+  max-width: 100%;
+}
+/* Skjul radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Positioner rækken baseret på checked radio button */
+#carousel-01:checked ~ .carousel-track {
+  transform: translateX(0);
+}
+#carousel-02:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#carousel-03:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+#carousel-04:checked ~ .carousel-track {
+  transform: translateX(-300%);
+}
+
+/* Karusellens navigationsprikker */
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  background-color: #fffffa;
+  margin-top: 0.1px;
+  bottom: 0;
+}
+/* 
+/* Styling af prikkerne */
+/* .nav-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #feb4c2c8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} */
+*/
+
+/* Highlight prikken når den er valgt */
+#carousel-01:checked ~ .carousel-navigation label[for="carousel-01"] {
+  background-color: #bc3a41;
+}
+#carousel-02:checked ~ .carousel-navigation label[for="carousel-02"] {
+  background-color: #bc3a41;
+}
+#carousel-03:checked ~ .carousel-navigation label[for="carousel-03"] {
+  background-color: #bc3a41;
+}
+#carousel-04:checked ~ .carousel-navigation label[for="carousel-04"] {
+  background-color: #bc3a41;
+}
+.billeder {
+  display: none;
+}
+/* category dropdown */
+.category_dropdown_container {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.menu_checkbox {
+  display: none;
+}
+
+.category_menu {
+  cursor: pointer;
+  font-size: 2rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when checkbox is checked */
+#category_toggle:checked + label .category_menu {
+  transform: rotate(180deg);
+}
+
+label h2 {
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 8vw;
+}
+
+.category_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18vw; /* Adjust spacing between text and arrow */
+  background-color: #425741; /* Change to fit your design */
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+  width: auto; /* Adjust button width */
+  transition: background 0.2s ease;
+  border-top: #425741 solid 1px;
+  border-left: #425741 solid 1px;
+  border-right: #425741 solid 1px;
+  border-bottom: white solid 1px;
+  font-size: 10pt;
+}
+
+.category_button:hover {
+  background-color: white; /* Darken on hover */
+  color: #425741;
+  border: #425741 solid 1px;
+}
+
+/* Fullscreen menu (hidden by default) */
+.category_dropdown {
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.2s ease-in-out;
+  box-sizing: border-box;
+  background-color: #425741;
+  overflow: hidden;
+}
+
+/* Show menu when checkbox is checked */
+.menu_checkbox:checked ~ .category_dropdown {
+  transform: scaleY(1);
+  pointer-events: auto;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* Disable scrolling when menu is open */
+body:has(.menu-checkbox:checked) {
+  overflow: hidden;
+}
+
+.category_dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category_dropdown ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.category_dropdown ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  .fuld {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .carousel {
+    display: none;
+  }
+  .billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .category_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22vw; /* Adjust spacing between text and arrow */
+    background-color: #425741; /* Change to fit your design */
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+    width: auto; /* Adjust button width */
+    transition: background 0.2s ease;
+    border-top: #425741 solid 1px;
+    border-left: #425741 solid 1px;
+    border-right: #425741 solid 1px;
+    border-bottom: white solid 1px;
+    font-size: 10pt;
+    text-align: left;
+  }
+  .category_dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    column-gap: 30rem;
+    margin-left: 0;
+    text-align: left;
+  }
+  label h2 {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 5vw;
+  }
+  .category_dropdown ul li {
+    text-align: left;
+  }
+}

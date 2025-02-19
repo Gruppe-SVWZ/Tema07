@@ -26,13 +26,42 @@ html {
   --p_font: "Inter_28pt-Light";
 }
 
+body {
+  height: 100%;
+  margin-top: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--H_font);
+}
+
+h1,
+h2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+p {
+  font-family: var(--p_font);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 12pt;
+  line-height: 150%;
+}
+
 .global_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 95%;
+  width: 100vw;
+  height: 60px;
   z-index: 1000;
+  background-color: white;
+  margin-top: -0.5rem;
+  font-family: var(--p_font);
 }
 
 .global_menu ul {
@@ -57,6 +86,12 @@ html {
   z-index: 1000;
   cursor: pointer;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -6px;
+  margin-right: 0.5rem;
 }
 
 /* Fullscreen menu (hidden by default) */
@@ -73,7 +108,7 @@ html {
   padding-right: 1rem;
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
   z-index: 20;
   background-color: white;
@@ -123,14 +158,24 @@ body:has(.menu-checkbox:checked) {
 }
 
 .footer-section {
-  flex: 1; /* Each section takes up equal space */
-  padding: 0 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
+.footer-section:last-of-type {
+  margin-bottom: 2rem;
+}
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: var(--p_font);
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #fcfaf8;
+  border-top: 0.5px solid black;
 }
 
 .footer-section ul li {
@@ -152,14 +197,53 @@ footer h3 {
 }
 
 .footer_slogan {
-  font-size: 11vw;
+  font-size: 11.9vw;
   color: transparent;
   -webkit-text-stroke: 0.5px black;
+  margin-left: 0.5rem;
+  /* font-family: var(--H_font); */
 }
 
+.logo {
+  width: 150px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -1rem;
+}
+
+.global_menu_desktop {
+  display: none !important;
+}
+
+.icons {
+  display: none;
+}
+
+.category_button {
+  font-family: var(--H_font);
+}
+
+.category_dropdown {
+  font-family: var(--p_font);
+}
 @media (width > 700px) {
   .burger-menu {
     display: none;
+  }
+
+  .global_menu {
+    display: flex;
+    width: 100vw !important;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
   }
 
   .footer_container {
@@ -168,5 +252,53 @@ footer h3 {
 
   .footer_slogan {
     -webkit-text-stroke: 1px black;
+  }
+
+  .global_menu_desktop {
+    display: flex !important;
+    align-items: center;
+    flex: 1;
+    font-size: 14pt;
+    margin-left: 1rem;
+  }
+
+  .global_menu_desktop a:hover {
+    text-decoration: underline;
+  }
+
+  .global_menu ul {
+    gap: 2rem;
+  }
+
+  .icons {
+    display: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 1.5rem;
+  }
+
+  .icons img {
+    width: 28px;
+  }
+
+  .logo img {
+    width: 140%;
+  }
+
+  .logo {
+    height: 50px;
+    width: 120px;
+    margin-left: 0;
+  }
+
+  footer {
+    border-top: solid 1px black;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
   }
 }

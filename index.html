@@ -6,15 +6,16 @@
     <title>Forside</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/generel.css" />
+    
   </head>
   <body>
     <header>
       <nav class="global_menu">
-        <ul>
+        <ul class="global_menu_desktop">
           <li><a href="index.html">Home</a></li>
-          <li><a href="">Shop</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="produktside.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li>
             <a href="">
               <img src="" alt="" />
@@ -22,6 +23,19 @@
           </li>
           <li><a href=""></a></li>
         </ul>
+
+        <div class="logo">
+          <a href="index.html"><img src="img/All_goods_logo.webp" alt="" /></a>
+        </div>
+
+        <div class="icons">
+          <div>
+            <img src="img/search.webp" alt="" />
+          </div>
+          <div>
+            <img src="img/Shopping cart.webp" alt="" />
+          </div>
+        </div>
 
         <!-- full screen burger -->
         <div class="header_menu">
@@ -31,9 +45,9 @@
           <div class="fullscreen-menu">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="">Shop</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="produktside.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -42,45 +56,120 @@
     <main>
       <section>
         <img class="fuld" src="img/All_goods_frontpage.webp" alt="skilt" />
-        <span>BULK MADE BETTER</span>
+        <div  class="hero">
+        <span>Bulk Made Better.</span>
         <p><strong>All Goods</strong> is a B2B wholesale supplier of electronics, jewelry, and fashion. We offer curated selections, competitive pricing, and reliable service to help retailers meet market demands.</p>
+      </div>
+      </section>
+      <section>
+        <div class="category_dropdown_container">
+          <input type="checkbox" id="category_toggle" class="menu_checkbox" />
+          <label for="category_toggle" class="category_button">
+            <h2>Categories</h2>
+            <h2 class="category_menu">&#8595;</h2>
+            <!-- Arrow ↓ -->
+          </label>
+  
+          <div class="category_dropdown">
+            <ul class="dropdown_ul">
+              <li></li>
+              <!-- <li><a href="">Shop</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li> -->
+            </ul>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Popular products</h2>
         <!-- billede karussel -->
-        <div class="image_container">
-          <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
-          <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
-          <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="" />
+        <div class="billedekarussel">
+ 
+          <div class="carousel">
+            <input type="radio" name="carousel" id="carousel-01" checked />
+            <input type="radio" name="carousel" id="carousel-02" />
+            <input type="radio" name="carousel" id="carousel-03" />
+            <input type="radio" name="carousel" id="carousel-04" />
+            
+        
+            <div class="carousel-track">
+              <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="Image 01" class="carousel-img" /></a>
+              <img src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png" alt="Image 02" class="carousel-img" /></a>
+              <img src="https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/2.png" alt="Image 03" class="carousel-img" /></a>
+              <img src="https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png" alt="Image 04" class="carousel-img" /></a>
+             
+            </div>
+            <div class="carousel-navigation">
+              <label for="carousel-01" class="nav-dot"></label>
+              <label for="carousel-02" class="nav-dot"></label>
+              <label for="carousel-03" class="nav-dot"></label>
+              <label for="carousel-04" class="nav-dot"></label>
+             
+            </div>
+          </div>
+        </div>
+        <div class="billeder">
+          <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png" alt="">
+          <img src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png" alt="">
+          <img src="https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/2.png" alt="">
+          <img src="https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png" alt="">
         </div>
       </section>
-      <section>
-        <h1>Categories</h1>
-        <div class="category_list">
-          <!-- <div class="category_list_container">
-            <h2>Beauty</h2>
-            <img src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png" alt="palette" />
-            <div><a href="produktside.html?category=Beauty">Shop</a></div>
-          </div>
-          <div class="category_list_container">
-            <h2>Fragrances</h2>
-            <img src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png" alt="parfume" />
-            <div><a href="produktside.html?category=fragrances">Shop</a></div>
-          </div>
-          <div class="category_list_container">
-            <h2>Furniture</h2>
-            <img src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png" alt="sofa" />
-            <div><a href="produktside.html?category=furniture">Shop</a></div>
-          </div>
-          <div class="category_list_container">
-            <h2>Groceries</h2>
-            <img src="https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png" alt="æg" />
-            <div><a href="produktside.html?category=groceries">Shop</a></div>
-          </div> -->
-        </div>
-      </section>
+      
+     
     </main>
-    <footer></footer>
+    <footer>
+      <span class="footer_slogan">Bulk Made Better.</span>
+      <div class="footer_container">
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul class="categories">
+            <li></li>
+            <!-- <li><a href="#">Beaty</a></li>
+            <li><a href="#">Fragrances</a></li>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Groceries</a></li>
+            <li><a href="#">Home Decoration</a></li>
+            <li><a href="#">Kitchen Accessories</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Mens Shirts</a></li>
+            <li><a href="#">Mens Shoes</a></li>
+            <li><a href="#">Mens Watches</a></li>
+            <li><a href="#">Mobile Accessories</a></li>
+            <li><a href="#">Motorcycle</a></li>
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Sports Accessories</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Vehicle</a></li>
+            <li><a href="#">Womens Bags</a></li>
+            <li><a href="#">Womens Dressess</a></li>
+            <li><a href="#">Womens Jewellery</a></li>
+            <li><a href="#">Womens Shoes</a></li>
+            <li><a href="#">Womens Watches</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="js/index.js"></script>
+    <script src="js/about.js"></script>
   </body>
 </html>
