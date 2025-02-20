@@ -285,7 +285,7 @@ label span {
 /* Fullscreen menu (hidden by default) */
 .category_dropdown {
   width: 100%;
-  height: 0;
+  height: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
