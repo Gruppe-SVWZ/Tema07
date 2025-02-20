@@ -11,27 +11,21 @@
   font-size: 20pt;
   margin-top: 150px;
 }
-.price {
-  font-size: 20px;
-  margin-bottom: 0px;
-  margin-top: 20px;
-  text-align: end;
-}
-.discount {
-  font-size: 14px;
-  color: red;
-  margin-bottom: 10px;
-  text-align: end;
-  margin-top: 150px;
-}
-.discount {
-  font-size: 14px;
-  color: red;
-  margin-bottom: 10px;
-}
 .price-discount {
-  text-align: end;
-  margin-top: 1em;
+  display: flex;
+  flex-direction: column;  
+  align-items: start;      
+  gap: 0.3rem;             
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.discount {
+  font-size: 1rem;
+  color: red;
 }
 .info {
   padding-top: 0px;
