@@ -100,8 +100,6 @@ section p {
 /* Fullscreen menu (hidden by default) */
 .fullscreen-menu {
   position: fixed;
-  top: 10;
-  left: 0;
   width: 100vw;
   height: calc(100vh); /* Take up remaining space */
   display: flex;
