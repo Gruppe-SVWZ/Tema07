@@ -96,15 +96,6 @@ function toggleDropdown(id) {
 // fetchProductDetails();
 // Hent produkt-id fra URL'en
 
-
-
-
-
-
-
-
-
-
 // victors seneste
 
 // Hent produkt-id fra URL'en
@@ -139,17 +130,17 @@ function toggleDropdown(id) {
 //   productImage.src = product.image; // Opdater produktbillede
 // }
 
-
 const productId = new URLSearchParams(window.location.search).get("id");
-const productContainer = document.querySelector(".product")
-
+const productContainer = document.querySelector(".product");
 
 fetch(`https://dummyjson.com/products/${productId}`)
-.then(response => response.json())
-.then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     productContainer.innerHTML = `
     <div class="product_image_container">
-          <img src="ef3-placeholder-image.jpg" alt="" />
+     <img src="${data.images?.[0] || data.thumbnail}" 
+     alt="${data.title}" 
+     class="product-image" />
         </div>
 
         <section class="product_info">
@@ -160,30 +151,27 @@ fetch(`https://dummyjson.com/products/${productId}`)
             </div>
             <div class="price-discount">
               <div class="price">${data.price} €</div>
-              <div class="discount">${data.discountPercentage}</div>
-              <!-- Eventuelt rabat -->
+              <div class="discount">${data.discountPercentage}%</div>
             </div>
             <div class="cart-section">
               <input type="number" class="quantity" value="1" min="1" />
               <button class="add-to-cart">ADD TO CART</button>
             </div>
             <div class="info">
-              <p>Stock: ${data.availabilityStatus}</p>
-              <p>Shipping: ${data.shippingInformation}</p>
-              <p>Warranty: ${data.warrantyInformation}</p>
+              <p>Stock: ${data.stock}</p>
+              <p>Shipping: Ships in 1-2 business days</p>
             </div>
           </div>
 
           <button class="toggle-btn" onclick="toggleDropdown('description-content')">Description ↓</button>
           <div id="description-content" class="toggle-content">
             <p>${data.description}</p>
-            <!-- Beskrivelse vil blive fyldt af JS -->
             <p>
               Dimensions:<br />
-              Width: ${data.dimensions.width} CM<br />
-              Height: ${data.dimensions.height} CM<br />
-              Depth: ${data.dimensions.depth} CM<br />
-              Weight: ${data.weight} KG
+              Width: ${data.dimensions?.width ?? "N/A"} CM<br />
+              Height: ${data.dimensions?.height ?? "N/A"} CM<br />
+              Depth: ${data.dimensions?.depth ?? "N/A"} CM<br />
+              Weight: ${data.weight ?? "N/A"} KG
             </p>
           </div>
 
@@ -192,5 +180,6 @@ fetch(`https://dummyjson.com/products/${productId}`)
             <p>★★★☆☆ - 3.08/5 (Based on 120 reviews)</p>
           </div>
         </section>
-    `
-})
+    `;
+  })
+  .catch((error) => console.error("Error fetching product data:", error));

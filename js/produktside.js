@@ -1,68 +1,6 @@
-// const mycategory = new URLSearchParams(window.location.search).get("category");
-// const listContainer = document.querySelector(".product_list");
-
-// fetch(`https://dummyjson.com/products/category/${mycategory}`)
-//   .then((response) => response.json())
-//   .then((data) => showList(data.products))
-//   .catch((error) => console.error("Fejl ved hentning af data:", error));
-
-// function showList(products) {
-//   console.log(products);
-//   if (!Array.isArray(products)) {
-//     console.error("Forventede en array, men fik:", products);
-//     return;
-//   }
-
-//   const markup = products
-//     .map(
-//       (product) =>
-//         `<article class="product_list_container">
-//           <a href="indvidueltprodukt.html?id=${product.id}">
-//             <img src="${product.thumbnail}" alt="${product.title}">
-//             <h3>${product.title}</h3>
-//             <p>Pris: ${product.price} kr.</p>
-//           </a>
-//         </article>`
-//     )
-//     .join("");
-
-//   console.log(markup);
-//   listContainer.innerHTML = markup;
-// }
-
-// const listContainer = document.querySelector(".product_list");
-
-// fetch("https://dummyjson.com/products")
-//   .then((response) => response.json())
-//   .then((data) => showList(data.products))
-//   .catch((error) => console.error("Fejl ved hentning af data:", error));
-
-// function showList(products) {
-//   console.log(products);
-//   if (!Array.isArray(products)) {
-//     console.error("Forventede en array, men fik:", products);
-//     return;
-//   }
-
-//   const markup = products
-//     .map(
-//       (product) => `
-//       <article class="product_list_container">
-//         <a href="indvidueltprodukt.html?id=${product.id}">
-//           <img src="${product.thumbnail}" alt="${product.title}">
-//           <h3>${product.title}</h3>
-//           <p>Pris: ${product.price} kr.</p>
-//         </a>
-//       </article>`
-//     )
-//     .join("");
-
-//   console.log(markup);
-//   listContainer.innerHTML = markup;
-// }
 const mycategory = new URLSearchParams(window.location.search).get("category");
 const listContainer = document.querySelector(".product_list");
-const pageTitle = document.querySelector(".alleprodukter");
+const pageTitle = document.querySelector("#alleprodukter");
 const sortSelect = document.querySelector("#sort");
 
 let productsData = [];
@@ -216,3 +154,36 @@ function showCategoriesDropdown(categories) {
 
   dropdownContainer.innerHTML = markup;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel-items");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 210}px)`;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= carousel.children.length - 3;
+  }
+
+  prevButton.onclick = () => {
+    if (currentIndex > 0) currentIndex--;
+    updateCarousel();
+  };
+  nextButton.onclick = () => {
+    if (currentIndex < carousel.children.length - 3) currentIndex++;
+    updateCarousel();
+  };
+
+  updateCarousel();
+});
+
+document.querySelectorAll(".carousel-items img").forEach((img) => {
+  img.addEventListener("click", function () {
+    const productId = this.getAttribute("data-id");
+    if (productId) {
+      window.location.href = `individueltprodukt.html?id=${productId}`;
+    }
+  });
+});
