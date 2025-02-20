@@ -26,6 +26,7 @@ h1 {
 
 .hero p {
   width: 700px;
+  margin-bottom: 2rem;
 }
 
 .hero span {
@@ -281,7 +282,7 @@ body:has(.menu-checkbox:checked) {
     gap: 22vw; /* Adjust spacing between text and arrow */
     background-color: #425741; /* Change to fit your design */
     color: white;
-    margin-top: 50px;
+    margin-top: 8rem;
     cursor: pointer;
     width: auto; /* Adjust button width */
     transition: background 0.1s ease;
