@@ -202,7 +202,7 @@ footer h3 {
 .footer_slogan {
   font-size: 12.4vw;
   color: transparent;
-  -webkit-text-stroke: 0.5px black;
+  -webkit-text-stroke: 0.1vw black;
   margin-left: 0.5rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -254,7 +254,7 @@ footer h3 {
   }
 
   .footer_slogan {
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 0.1vw black;
   }
 
   .global_menu_desktop {

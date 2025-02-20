@@ -100,6 +100,7 @@ function showList(products) {
             </div>
             <div>
                 <p>Price: ${product.price} €</p>
+                <p class="discount-percentage">${product.discountPercentage} %</p>
             </div>
         </article>`;
     })
