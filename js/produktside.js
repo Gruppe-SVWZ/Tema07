@@ -94,9 +94,13 @@ function showList(products) {
         <article class="product_list_container">
             <a href="individueltprodukt.html?id=${product.id}">
                 <img src="${imageUrl}" alt="${product.title}">
-                <h3>${product.title}</h3>
-                <p>Pris: ${product.price} kr.</p>
             </a>
+            <div>
+                <h3>${product.title}</h3>
+            </div>
+            <div>
+                <p>Price: ${product.price} €</p>
+            </div>
         </article>`;
     })
     .join("");
