@@ -65,18 +65,18 @@
   }
 
   .cart-section button {
-    background-color: #2f3e2f;
+    background-color: #425741;
     color: white;
-    border: none;
+    border: #425741 solid 1px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
     margin-top: 0;
     padding: 11px;
   }
 
   .cart-section button:hover {
-    background-color: #1d281d;
+    background-color: white;
+    border: #425741 solid 1px;
   }
 
   .product-name h1 {
