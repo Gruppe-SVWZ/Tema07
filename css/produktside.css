@@ -1,5 +1,4 @@
 body, html {
-    margin: 0;
     padding: 0;
     position: relative;
 }
@@ -146,7 +145,7 @@ button:disabled {
     display: inline-block;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
   }
   
@@ -300,11 +299,12 @@ button:disabled {
         gap: 20px; 
     }
     .category_dropdown_container {
-        margin-top: 20rem;
+        margin-top: 15rem;
 
     }
     #alleprodukter{
         margin-top: 5rem;
+        margin-bottom: 2rem;
     }
     .category_button {  
         font-size: 26pt; 
@@ -312,4 +312,8 @@ button:disabled {
         gap: 16rem; 
     }  
  
+h2{
+  font-size: 8vw;
+}
+
   }
