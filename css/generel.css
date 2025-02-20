@@ -104,7 +104,7 @@ p {
 /* Fullscreen menu (hidden by default) */
 .fullscreen-menu {
   position: fixed;
-  top: 10;
+  top: 50px;
   left: 0;
   width: 100vw;
   height: calc(100vh); /* Take up remaining space */
@@ -307,5 +307,9 @@ footer h3 {
 
   .footer-section {
     margin-bottom: 2rem;
+  }
+
+  .fullscreen-menu {
+    top: 80px;
   }
 }
