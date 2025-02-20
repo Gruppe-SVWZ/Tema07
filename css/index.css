@@ -1,16 +1,24 @@
 img {
   width: 60%;
   height: 100%;
-  margin-left: 15%;
 }
-span {
-  font-size: 10vw;
-  color: transparent;
-  -webkit-text-stroke: 0.5px black;
-}
+
 h2 {
   font-size: 10vw;
 }
+
+h1 {
+  font-size: 11vw;
+  line-height: 95%;
+  margin-top: -0.5rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 0.5px black;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
 .hero {
   background-color: var(--BG_color2);
   border-bottom: solid black 1px;
@@ -48,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
   height: auto;
-  margin-top: 10%;
+  margin-top: 10.5%;
 }
 
 header {
@@ -291,5 +299,9 @@ body:has(.menu-checkbox:checked) {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 5vw;
+  }
+
+  h1 {
+    -webkit-text-stroke: 0.1vw black;
   }
 }
