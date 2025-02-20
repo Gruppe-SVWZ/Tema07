@@ -24,9 +24,18 @@ h1 {
   border-bottom: solid black 1px;
 }
 
+.hero p {
+  width: 700px;
+  margin-bottom: 2rem;
+}
+
 .hero span {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 1rem;
+}
+
+.hero h1 {
+  margin-left: 0.6rem;
 }
 
 a {
@@ -95,7 +104,7 @@ input[type="radio"] {
 
 /* Positioner rækken baseret på checked radio button */
 #carousel-01:checked ~ .carousel-track {
-  transform: translateX(0);
+  transform: translateX(0%);
 }
 #carousel-02:checked ~ .carousel-track {
   transform: translateX(-100%);
@@ -129,9 +138,7 @@ input[type="radio"] {
   cursor: pointer;
   transition: background-color 0.3s;
 } */
-*/
 
-/* Highlight prikken når den er valgt */
 #carousel-01:checked ~ .carousel-navigation label[for="carousel-01"] {
   background-color: #bc3a41;
 }
@@ -273,10 +280,10 @@ body:has(.menu-checkbox:checked) {
     gap: 22vw; /* Adjust spacing between text and arrow */
     background-color: #425741; /* Change to fit your design */
     color: white;
-    margin-top: 50px;
+    margin-top: 8rem;
     cursor: pointer;
     width: auto; /* Adjust button width */
-    transition: background 0.2s ease;
+    transition: background 0.1s ease;
     border-top: #425741 solid 1px;
     border-left: #425741 solid 1px;
     border-right: #425741 solid 1px;
