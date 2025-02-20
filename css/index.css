@@ -138,7 +138,6 @@ input[type="radio"] {
   cursor: pointer;
   transition: background-color 0.3s;
 } */
-*/
 
 /* Highlight prikken når den er valgt */
 #carousel-01:checked ~ .carousel-navigation label[for="carousel-01"] {
