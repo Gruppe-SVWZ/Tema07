@@ -104,7 +104,7 @@ input[type="radio"] {
 
 /* Positioner rækken baseret på checked radio button */
 #carousel-01:checked ~ .carousel-track {
-  transform: translateX(0);
+  transform: translateX(0%);
 }
 #carousel-02:checked ~ .carousel-track {
   transform: translateX(-100%);
@@ -139,7 +139,6 @@ input[type="radio"] {
   transition: background-color 0.3s;
 } */
 
-/* Highlight prikken når den er valgt */
 #carousel-01:checked ~ .carousel-navigation label[for="carousel-01"] {
   background-color: #bc3a41;
 }
