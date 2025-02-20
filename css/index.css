@@ -203,6 +203,12 @@ label h2 {
   font-size: 10pt;
 }
 
+.category_button span {
+  font-family: var(--H_font);
+  font-size: 6vw;
+  padding: 0.5rem;
+}
+
 .category_button:hover {
   background-color: white; /* Darken on hover */
   color: #425741;
