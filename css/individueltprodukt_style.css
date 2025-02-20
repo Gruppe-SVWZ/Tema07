@@ -9,13 +9,14 @@
 }
 .product-name h1 {
   font-size: 20pt;
-  margin-top: 150px;
+  margin-top: 3rem;
 }
 .price-discount {
   display: flex;
-  flex-direction: column;  
-  align-items: start;      
-  gap: 0.3rem;             
+  flex-direction: column;
+  align-items: start;
+  gap: 0.3rem;
+  margin-left: 1rem;
 }
 
 .price {
@@ -31,7 +32,7 @@
   padding-top: 0px;
 }
 .cart-section {
-  padding-top: 1em;
+  margin-left: 1rem;
 }
 .quantity {
   padding: 8px;
@@ -41,7 +42,6 @@
 .add-to-cart {
   background-color: #3d4b3a;
   color: white;
-  margin-top: 12px;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -85,4 +85,18 @@
   font-weight: bold;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+@media (min-width: 700px) {
+  .price {
+    margin-left: 1rem;
+  }
+
+  .discount {
+    margin-left: 1rem;
+  }
+
+  .cart-section {
+    margin-left: 1rem;
+  }
 }
