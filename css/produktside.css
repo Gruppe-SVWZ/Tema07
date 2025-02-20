@@ -292,9 +292,7 @@ button:disabled {
         /* grid-template-columns: repeat(4, 1fr);  */
     }
 
-    .product_list_container img {
-        height: 300px; /
-    
+  
     }
     .carousel-items img {
         width: 300px; 
