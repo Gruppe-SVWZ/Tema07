@@ -46,6 +46,7 @@
   padding: 10px;
   border: #425741 solid 1px;
   cursor: pointer;
+  transition: background 0.1s ease;
 }
 .description {
   background-color: #425741;
@@ -73,6 +74,7 @@
   margin-left: 1rem;
   width: 100%;
   box-sizing: border-box;
+  transition: background 0.1s ease;
 }
 
 .toggle-content p {
@@ -94,6 +96,7 @@
   font-weight: bold;
   margin-right: 1rem;
   margin-left: 1rem;
+  transition: background 0.1s ease;
 }
 
 .toggle-btn:hover {
